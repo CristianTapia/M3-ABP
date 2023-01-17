@@ -8,22 +8,27 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    
     <div>
-        <h1>Problema 3</h1>
+        <h1>Problema 2</h1>
     </div>
     <div>
-        <h2>¿Cuántos sets ha ganado el jugador A?</h2>
-        <input id="numA" type="number" placeholder="">
+        <h2>¿Qué largo requieres para el arreglo?</h2>
+        <input id="num" type="number" placeholder="Máximo 100">
     </div>
     <div>
-        <h2>¿Cuántos sets ha ganado el jugador B?</h2>
-        <input id="numB" type="number" placeholder="">
+        <h2>Click al botón para crear el arreglo con números aleatorios del 0 al 100</h2>
+        <button class ="btn-2" onclick="createArray()">Generar arreglo aleatorio</button>
+    </div>    
+    <!-- Mostrar info -->
+    <div id="show">
     </div>
-    <div>
-        <button onclick="showDiv()">Resultado del partido</button>
-        <!-- Mostrar info -->
-        <div id="show">
-        </div>
+    <div id="search-box">
+        <h2>¿Qué número deseas buscar dentro del arreglo?</h2>
+        <input id="search" type="number" placeholder="Entre 0 y 100"></input>
+        <button class ="btn-2" onclick="searchNumber()">Buscar</button>
+    </div>
+    <div id="show-element">
     </div>
 
     <script src="js/scripts-4.js"></script>
