@@ -19,7 +19,9 @@ button {
     padding: 10px;
     cursor: pointer;
     border: none;
-    width: 100%;
+}
+.btn-2 {
+    width: 30%;
 }
 button:hover {
     background-color: #0097c7;

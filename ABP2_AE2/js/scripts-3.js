@@ -9,22 +9,30 @@ function showDiv() {
     if (gamesA > gamesB) {
         if ((gamesA == 6 || gamesA == 7) && diff >= 2) {
             document.getElementById("show").innerHTML = `<p>El jugador A ganó por una diferencia de ${diff} juegos`;
+        } if (gamesA == 7 && diff == 1) {
+            document.getElementById("show").innerHTML = `<p>El jugador A ganó por una diferencia de ${diff} juego`;
         } if (gamesA <= 6 && diff == 1) {
             document.getElementById("show").innerHTML = `<p>El jugador A va ganando por una diferencia de ${diff} juego`; 
-        } if (gamesA >= 7 && diff > 2) {
+        } if (gamesA >= 7 && diff >= 2) {
             document.getElementById("show").innerHTML = `<p>No existe una diferencia de ${diff} juegos para esta instancia`;
         }
     }
     if (gamesB > gamesA) {
         if ((gamesB == 6 || gamesB == 7) && diff >= 2) {
             document.getElementById("show").innerHTML = `<p>El jugador B ganó por una diferencia de ${diff} juegos`;
+        } if (gamesB == 7 && diff == 1) {
+            document.getElementById("show").innerHTML = `<p>El jugador B ganó por una diferencia de ${diff} juego`; 
         } if (gamesB <= 6 && diff == 1) {
             document.getElementById("show").innerHTML = `<p>El jugador B va ganando por una diferencia de ${diff} juego`; 
-        } if (gamesB >= 7 && diff > 2) {
+        } if (gamesB >= 7 && diff >= 2) {
             document.getElementById("show").innerHTML = `<p>No existe una diferencia de ${diff} juegos para esta instancia`;
         }
     }
     if (gamesA == gamesB) {
-        document.getElementById("show").innerHTML = `El juego está empatado`;
-    }
+        if ((gamesA < 7 || gamesB < 7)) {
+            document.getElementById("show").innerHTML = `El juego está empatado`;
+        } else {
+            document.getElementById("show").innerHTML = `<p>No existe una diferencia de ${diff} juegos para esta instancia`;
+        }       
+    } 
 }
