@@ -1,0 +1,22 @@
+#figuras {
+    list-style: none;
+}
+
+.arriba {
+    transform: scale(1.2);
+}
+
+.abajo {
+    transform: scale(0.8);
+}
+.borde {
+    border: 1px solid red;
+}
+#pictures {
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+}
+#box {
+    display: none;
+} 
