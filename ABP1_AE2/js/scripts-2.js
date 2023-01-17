@@ -1,19 +1,3 @@
-/* -------------------------------
--            PROBLEMA 1          -
---------------------------------*/
-
-function showDiv() {
-    document.getElementById("show").style.display = "block";
-    let valorUSD = document.getElementById("USD").value;
-    let currency = valorUSD * 745;
-    // tofixed() agregar
-    document.getElementById("show").innerHTML = "<p>El valor equivale a: $" + currency;
-}
-
-/* -------------------------------
--            PROBLEMA 2          -
---------------------------------*/
-
 var selectionMade;
 var percentage;
 var earnings;
@@ -52,8 +36,6 @@ function earningsField() {
         } else {
             earnings = false;
         }
-        console.log(valueBoxFinal)
-        console.log(earnings)
     return earnings;
 }
 
@@ -65,20 +47,3 @@ function buttonPressed() {
         alert("No eres elegible para el subsidio");
     }
 }
-
-// function buttonPressed() {
-//     let button = document.getElementById("send-info");
-//     if ((selectionMade && percentage && earnings) == true) {
-//         alert("Eres elegible para el subsidio");
-//     } if ((selectionMade || percentage || earnings) == null) {
-    
-//     } else {
-//         alert("No eres elegible para el subsidio");
-//     }
-// }
-
-// checkBox();
-// field();
-
-// var x = checkBox();
-// console.log(x);
