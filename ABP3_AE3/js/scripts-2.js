@@ -1,10 +1,9 @@
-function showDiv() {
-    let div = document.getElementById("show").style.display;
-    let value = document.getElementById("num").value;
-    if ((value % 4 == 0 && value % 100 != 0) || value % 400 == 0) {
-        document.getElementById("show").innerHTML = "<p>El año " + value + " es bisiesto";
+function createArray() {
+    let array = [];
+    for (let i = 0; i < 10; i++) {
+        array.push(Math.floor(Math.random()*100));
     }
-    else {
-        document.getElementById("show").innerHTML = "<p>El año " + value + " no es bisiesto";
-    }
+    let maxNumber = Math.max(...array);
+    document.getElementById("show").innerHTML = `<div>Valores obtenidos: <br><br>[${array}]</div>
+                                                <div>El número mayor: <br><br>${maxNumber}</div>`;
 }

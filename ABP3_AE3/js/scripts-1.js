@@ -4,7 +4,6 @@ function showDiv() {
     for (let i = 0; i < valueLength; i++) {
         array.push(i + 1);
         array[i + 1] = array[i] * 2;
-        console.log(array)
     }
     document.getElementById("show").innerHTML = `<div>El arreglo generado: <br>[${array}]</div>`;
-} 
+}
