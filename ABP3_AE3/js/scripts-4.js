@@ -2,6 +2,7 @@
 var array = [];
 
 function createArray() {
+    // var array = [];
     var arraySize = document.getElementById("num").value;
     if (arraySize > 0 && arraySize <= 100) {
         for (let i = 0; i < arraySize; i++) {
@@ -20,13 +21,16 @@ function searchNumber() {
     let searchNum = document.getElementById("search").value;
     if (searchNum >= 0 && searchNum <= 100) {
         for (let i = 0; i < arraySize; i++) {
+            array[i];
             if (searchNum == array[i]) {
-                let match= true;
-            }
-            if (match == true) {
                 document.getElementById("show-element").innerHTML = `El número ${searchNum} está en la posición ${i}`;
-            }
+            } 
+            // if (match == true) {
+            //     document.getElementById("show-element").innerHTML = `El número ${searchNum} está en la posición ${i}`;
+            // }
         }
+        
+
     } else {
         document.getElementById("show-element").innerHTML = `El número ${searchNum} no es válido`;
     }
