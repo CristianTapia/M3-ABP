@@ -17,14 +17,26 @@ function createArray() {
 
 function searchNumber() {
     console.log(array)
+    let match = true;
+    let position;
     var arraySize = document.getElementById("num").value;
     let searchNum = document.getElementById("search").value;
     if (searchNum >= 0 && searchNum <= 100) {
         for (let i = 0; i < arraySize; i++) {
             if (searchNum == array[i]) {
-                document.getElementById("show-element").innerHTML = `El número ${searchNum} está en la posición ${i}`;
+                match = true;
+                position = i;
+                break;
+            } else {
+                match = false;
             }
         }
+        if (match == true) {
+            document.getElementById("show-element").innerHTML = `El número ${searchNum} está en la posición ${position}`;
+        } else {
+            document.getElementById("show-element").innerHTML = `El número ${searchNum} no está en el arreglo`;
+        }
+
     } else {
         document.getElementById("show-element").innerHTML = `El número ${searchNum} no es válido`;
     }

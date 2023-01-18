@@ -1,10 +1,8 @@
-// Crear arreglo aleatorio
-
 function checkNumber() {
     let number = document.getElementById("num").value;
     let isPrime = true;
     if (number > 1) {
-        for (let i = 2; i < (number - 1); i++) {
+        for (let i = 2; i < number; i++) {
             if (number % i == 0) {
                 isPrime = false;
                 break;
