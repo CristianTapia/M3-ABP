@@ -10,6 +10,8 @@ function createArray() {
         document.getElementById("show").innerHTML = `Arreglo generado: <br><br>[${array}]`;
         arraySorted = array.sort(function(a, b){return b - a});
         document.getElementById("show2").innerHTML = `Números ordenados: <br><br>${arraySorted}`;    
+    } else {
+        document.getElementById("show2").innerHTML = `Ingresa solo números enteros`;
     }
 }
 
